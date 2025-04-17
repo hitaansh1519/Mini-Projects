@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Colour Change</title>
+    <link rel="icon" href="./JavaScript.png">
+    <style>
+        
+        button{
+            margin:auto;
+            margin-bottom: 10px;
+        }
+
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="button" id="red" style="background-color: red; cursor: pointer; border-radius:5px;  border:black dashed 2px; padding: 8px">Red</button>
+        <button class="button" id="green" style="background-color: green; cursor: pointer; border-radius:5px; border:black dashed 2px; padding: 8px">Green</button>
+        <button class="button" id="blue" style="background-color: blue;cursor: pointer;  border-radius:5px; border:black dashed 2px; padding: 8px">Blue</button>
+        <button class="button" id="pink" style="background-color: pink;cursor: pointer;  border-radius:5px; border:black dashed 2px; padding: 8px">Pink</button>
+    </div>
+
+    <div><center><button class="button" id="reset" style="background-color:yellow ;cursor: pointer;  border-radius:5px; border:black dashed 2px; padding: 8px">Reset</button></center></div>
+</body>
+<script>
+    const button = document.querySelectorAll('button');
+    const body = document.querySelector('body');
+
+    button.forEach(function(button){
+        console.log(button);
+        button.addEventListener('click', function(event){
+            console.log(event);
+            console.log(event.target);
+
+            if(event.target.id == 'red'){
+                body.style.backgroundColor = event.target.id;
+            }
+
+            if(event.target.id == 'green'){
+                body.style.backgroundColor = event.target.id;
+            }
+
+            if(event.target.id == 'blue'){
+                body.style.backgroundColor = event.target.id;
+            }
+
+            if(event.target.id == 'pink'){
+                body.style.backgroundColor = event.target.id;
+            }
+
+            if(event.target.id == 'reset'){
+                body.style.backgroundColor = 'white';
+            }
+        });
+    });
+</script>
+</html>
